@@ -57,6 +57,11 @@ footer {
   padding: 1rem 0;
   border-bottom: 1px solid var(--border);
 }
+header nav{
+  display:flex;
+  justify-content:space-between;
+  margin:0px 20px;
+}
 header nav ul{
   display:flex;
   flex-direction:row;
@@ -68,22 +73,36 @@ header nav ul li{
 }
 header nav ul li a{
   text-decoration: none;
+  color: var(--text);
 }
 footer {
   border-top: 1px solid var(--border);
   border-bottom: none;
   color: var(--muted);
+  display: flex;
+  justify-content: space-between; /* Pushes nav to one side, copyright to the other */
+  align-items: center;            /* Vertically centers links with text */
+  padding: 1.5rem 2rem;
+}
+footer nav{
+  display:flex;
+  justify-content:space-between;
 }
 footer nav ul{
-  display:flex;
-  flex-direction:row;
-  list-style: none;
+  display: flex;
+  gap: 1.5rem;                   /* Spacing between footer links */
+  list-style: none;              /* Removes default bullet points */
+  margin: 0;
+  padding: 0;
 }
 footer nav ul li{
   color: var(--text);
 }
 main {
   padding: 2rem 0;
+}
+.container{
+  display:grid;
 }
 /* Button */
 .btn {
@@ -120,8 +139,17 @@ main {
 }
 /* Hero */
 .hero{
-width:1200px;
-height:800px;
+  flex-direction: column;
+  align-items: center;    /* Centers items horizontally */
+  text-align: center;     /* Centers inline text */
+  width: 100%;
+background-color: #fff;
+text-align:center;
+}
+.hero .heroImg img{
+max-width: 100%;
+  height: auto;
+  display: block;
 }
 /* Forms */
 input,
